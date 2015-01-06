@@ -41,6 +41,7 @@ namespace Universal_Apps_01.Views
             pages.Add("09 - C#", typeof(CS));
             pages.Add("10 - Arquivos", typeof(Arquivos));
             pages.Add("11 - Settings", typeof(Settings));
+            pages.Add("12 - Serviços", typeof(Servicos));
 
             
             this.DataContext = pages;

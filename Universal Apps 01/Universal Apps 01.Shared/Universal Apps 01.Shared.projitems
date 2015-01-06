@@ -17,6 +17,7 @@
     </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)ContinuationManager.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Converters\PositiveValueConverter.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Echo.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)RelayCommand.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)SuspensionManager.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)UserControls\UserControl-1.xaml.cs">
@@ -51,6 +52,9 @@
     <Compile Include="$(MSBuildThisFileDirectory)Views\PageBase.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Views\Resources.xaml.cs">
       <DependentUpon>Resources.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Views\Servicos.xaml.cs">
+      <DependentUpon>Servicos.xaml</DependentUpon>
     </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)Views\Settings.xaml.cs">
       <DependentUpon>Settings.xaml</DependentUpon>
@@ -101,6 +105,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="$(MSBuildThisFileDirectory)Views\Resources.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="$(MSBuildThisFileDirectory)Views\Servicos.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
