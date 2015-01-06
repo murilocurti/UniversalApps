@@ -57,5 +57,7 @@ namespace Universal_Apps_01.ViewModels
                 this.Set("Lista");
             }
         }
+
+        public void teste() { }
     }
 }
