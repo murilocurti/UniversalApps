@@ -1,0 +1,35 @@
+﻿<Page
+    x:Class="Universal_Apps_01.Views.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Universal_Apps_01.Views"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:controls="using:Universal_Apps_01.UserControls"
+    mc:Ignorable="d">
+
+    <Grid Style="{StaticResource RootGridStyle}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="140"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!-- Back button and page title -->
+        <controls:Header DataContext="Universal Windows Apps" Tag="Collapsed"/>
+
+        <Grid Style="{StaticResource ContentGridStyle}">
+            
+            <ListView Grid.Row="1" Margin="0,0,0,50" ItemsSource="{Binding Keys}" HorizontalAlignment="Left" IsItemClickEnabled="True" ItemClick="ListView_ItemClick">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <TextBlock Text="{Binding}" FontSize="28" Margin="5"/>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+            
+        </Grid>
+        
+    </Grid>
+</Page>
+    
+    

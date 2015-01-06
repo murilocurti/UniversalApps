@@ -1,0 +1,46 @@
+﻿<Page
+    x:Class="Universal_Apps_01.Views.DataBinding"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Universal_Apps_01.Views"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:controls="using:Universal_Apps_01.UserControls"
+    mc:Ignorable="d">
+
+    
+
+    <Grid Name="root"  Style="{StaticResource RootGridStyle}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="140"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!-- Back button and page title -->
+        <controls:Header DataContext="DataBinding"/>
+
+        <Grid Name="content"  Style="{StaticResource ContentGridStyle}">
+            <StackPanel Margin="40" Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+                <TextBox IsEnabled="{Binding IsChecked,ElementName=chk}" 
+                 Foreground="{Binding Value, ElementName=sld, 
+                    Converter={StaticResource PositiveValueConverter}}"
+                 Text="{Binding Value, ElementName=sld, Mode=TwoWay}"></TextBox>
+                <Slider Name="sld" Value="{Binding Valor, Mode=TwoWay}" Maximum="100" Width="500"></Slider>
+                <ProgressBar Value="{Binding Value, ElementName=sld}"></ProgressBar>
+
+                <Rectangle HorizontalAlignment="Center" 
+                   Width="{Binding Value, ElementName=sld}"
+                   Height="100" Fill="Red" ></Rectangle>
+                <CheckBox Name="chk" IsChecked="{Binding Checado}"></CheckBox>
+
+                <Button Content="+10" Command="{Binding Mais10Command}"></Button>
+
+                <ListView ItemsSource="{Binding Lista}" 
+                  ItemTemplate="{StaticResource ValorDataTemplate}">
+
+                </ListView>
+            </StackPanel>
+        </Grid>
+
+    </Grid>
+</Page>
