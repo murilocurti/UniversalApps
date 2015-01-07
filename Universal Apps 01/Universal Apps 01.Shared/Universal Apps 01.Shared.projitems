@@ -174,6 +174,29 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
+    <None Include="$(MSBuildThisFileDirectory)Packages\Json.Net\Net20\Newtonsoft.Json.dll" />
+    <None Include="$(MSBuildThisFileDirectory)Packages\Json.Net\Net20\Newtonsoft.Json.pdb" />
+    <None Include="$(MSBuildThisFileDirectory)Packages\Json.Net\Net35\Newtonsoft.Json.dll" />
+    <None Include="$(MSBuildThisFileDirectory)Packages\Json.Net\Net35\Newtonsoft.Json.pdb" />
+    <None Include="$(MSBuildThisFileDirectory)Packages\Json.Net\Net40\Newtonsoft.Json.dll" />
+    <None Include="$(MSBuildThisFileDirectory)Packages\Json.Net\Net40\Newtonsoft.Json.pdb" />
+    <None Include="$(MSBuildThisFileDirectory)Packages\Json.Net\Net45\Newtonsoft.Json.dll" />
+    <None Include="$(MSBuildThisFileDirectory)Packages\Json.Net\Net45\Newtonsoft.Json.pdb" />
+    <None Include="$(MSBuildThisFileDirectory)Packages\Json.Net\Portable40\Newtonsoft.Json.dll" />
+    <None Include="$(MSBuildThisFileDirectory)Packages\Json.Net\Portable40\Newtonsoft.Json.pdb" />
+    <None Include="$(MSBuildThisFileDirectory)Packages\Json.Net\Portable\Newtonsoft.Json.dll" />
+    <None Include="$(MSBuildThisFileDirectory)Packages\Json.Net\Portable\Newtonsoft.Json.pdb" />
+    <None Include="$(MSBuildThisFileDirectory)Packages\Json.Net\WinRT\Newtonsoft.Json.dll" />
+    <None Include="$(MSBuildThisFileDirectory)Packages\Json.Net\WinRT\Newtonsoft.Json.pdb" />
     <None Include="$(MSBuildThisFileDirectory)Packages\Newtonsoft.Json2.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="$(MSBuildThisFileDirectory)Packages\Json.Net\Net20\Newtonsoft.Json.xml" />
+    <Content Include="$(MSBuildThisFileDirectory)Packages\Json.Net\Net35\Newtonsoft.Json.xml" />
+    <Content Include="$(MSBuildThisFileDirectory)Packages\Json.Net\Net40\Newtonsoft.Json.xml" />
+    <Content Include="$(MSBuildThisFileDirectory)Packages\Json.Net\Net45\Newtonsoft.Json.xml" />
+    <Content Include="$(MSBuildThisFileDirectory)Packages\Json.Net\Portable40\Newtonsoft.Json.xml" />
+    <Content Include="$(MSBuildThisFileDirectory)Packages\Json.Net\Portable\Newtonsoft.Json.xml" />
+    <Content Include="$(MSBuildThisFileDirectory)Packages\Json.Net\WinRT\Newtonsoft.Json.xml" />
   </ItemGroup>
 </Project>
