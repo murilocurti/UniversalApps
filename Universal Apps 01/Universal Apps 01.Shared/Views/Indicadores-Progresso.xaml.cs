@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
+using Universal_Apps_01.ViewModels;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
 using Windows.UI.Xaml;
@@ -22,9 +23,12 @@ namespace Universal_Apps_01.Views
     /// </summary>
     public sealed partial class Indicadores_Progresso : Page
     {
+        private Indicadores_ProgressoViewModel vm = new Indicadores_ProgressoViewModel();
+
         public Indicadores_Progresso()
         {
             this.InitializeComponent();
+            this.DataContext = vm;
         }
     }
 }

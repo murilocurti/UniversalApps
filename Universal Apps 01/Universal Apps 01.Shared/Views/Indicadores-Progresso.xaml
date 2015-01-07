@@ -14,14 +14,55 @@
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
 
+        
         <!-- Back button and page title -->
         <controls:Header DataContext="Indicadores de Progresso"/>
 
         <Grid Name="content"  Style="{StaticResource ContentGridStyle}">
+            
+            <StackPanel>
+                <Button Content="Progresso 1" Command="{Binding SalvarCommand}" 
+                        IsEnabled="{Binding IsEmProgresso, Converter={StaticResource BooleanNegationConverter}}"></Button>
+                
+                <ProgressBar IsIndeterminate="True" Margin="20" 
+                             Visibility="{Binding IsEmProgresso, Converter={StaticResource BooleanToVisibilityConverter}}"/>
+
+                
+                <TextBlock Text="{Binding MensagemDeProgresso}" FontSize="42" 
+                           Visibility="{Binding IsEmProgresso, Converter={StaticResource BooleanToVisibilityConverter}}"/>
+            </StackPanel>
+            
+            <ProgressRing IsActive="{Binding IsEmProgresso}"
+                          Width="64" Height="64" Foreground="White">
+                
+            </ProgressRing>
+            
+            
+            
+            
+
+        </Grid>
 
 
-        
 
+        <Grid Background="#AA000000" Grid.RowSpan="2"
+                  Visibility="{Binding IsEmProgresso, Converter={StaticResource BooleanToVisibilityConverter}}">
+            <StackPanel HorizontalAlignment="Center"
+                            VerticalAlignment="Center">
+
+                <ProgressRing IsActive="{Binding IsEmProgresso}"
+                          Width="64" Height="64" Foreground="White">
+
+                </ProgressRing>
+                <TextBlock Text="{Binding MensagemDeProgresso}" FontSize="36" 
+                           Visibility="{Binding IsEmProgresso, Converter={StaticResource BooleanToVisibilityConverter}}"/>
+
+                <ProgressBar IsIndeterminate="False" Margin="20" 
+                             Maximum="100"
+                             Value="{Binding ProgressoAtual}"
+                             Visibility="{Binding IsEmProgresso, Converter={StaticResource BooleanToVisibilityConverter}}"/>
+
+            </StackPanel>
         </Grid>
 
     </Grid>

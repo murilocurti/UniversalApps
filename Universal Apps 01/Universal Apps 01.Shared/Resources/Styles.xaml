@@ -5,6 +5,8 @@
     xmlns:local="using:Universal_Apps_01.Resources">
 
     <converters:PositiveValueConverter x:Key="PositiveValueConverter"/>
+    <converters:BooleanNegationConverter x:Key="BooleanNegationConverter"/>
+    <converters:BooleanToVisibilityConverter x:Key="BooleanToVisibilityConverter"/>
     
     <SolidColorBrush x:Key="Azul" Color="CornflowerBlue"/>
 
