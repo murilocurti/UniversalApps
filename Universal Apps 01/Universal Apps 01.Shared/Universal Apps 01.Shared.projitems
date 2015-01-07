@@ -25,6 +25,8 @@
     <Compile Include="$(MSBuildThisFileDirectory)UserControls\UserControl-1.xaml.cs">
       <DependentUpon>UserControl-1.xaml</DependentUpon>
     </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\MiscViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\ConectividadeViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\Indicadores_ProgressoViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\ViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\ViewModelBase.cs" />

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
+using Universal_Apps_01.ViewModels;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
 using Windows.UI.Xaml;
@@ -22,9 +23,19 @@ namespace Universal_Apps_01.Views
     /// </summary>
     public sealed partial class Conectividade : Page
     {
+        ConectividadeViewModel vm = new ConectividadeViewModel();
         public Conectividade()
         {
             this.InitializeComponent();
+
+            this.DataContext = vm;
+        }
+
+        protected override void OnNavigatedTo(NavigationEventArgs e)
+        {
+            base.OnNavigatedTo(e);
+
+            this.vm.LoadCommand.Execute(null);
         }
     }
 }

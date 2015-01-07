@@ -19,7 +19,9 @@
 
         <Grid Name="content"  Style="{StaticResource ContentGridStyle}">
 
-
+            <StackPanel>
+                <TextBlock Text="{Binding Mensagem}" FontSize="42"></TextBlock>
+            </StackPanel>
 
 
         </Grid>

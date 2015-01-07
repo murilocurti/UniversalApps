@@ -6,7 +6,12 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:controls="using:Universal_Apps_01.UserControls"
+    xmlns:viewmodels="using:Universal_Apps_01.ViewModels"
     mc:Ignorable="d">
+
+    <d:Page.DataContext>
+        <viewmodels:MiscViewModelSampleData />
+    </d:Page.DataContext>
 
     <Grid Name="root"  Style="{StaticResource RootGridStyle}">
         <Grid.RowDefinitions>
@@ -20,9 +25,97 @@
         <Grid Name="content"  Style="{StaticResource ContentGridStyle}">
 
 
+            <Rectangle x:Name="rect" Fill="Blue"></Rectangle>
+            
+            <StackPanel x:Name="stack" Orientation="Horizontal">
+                <TextBlock Text="{Binding Mensagem}" Foreground="Yellow" FontSize="26"/>
+                <TextBlock Text="{Binding Mensagem2}"/>
+                <ListView ItemsSource="{Binding Lista}">
+                    
+                </ListView>
+                <TextBox></TextBox>
+                <Button Content="IBGE"/>
+                <TextBox></TextBox>
+            </StackPanel>
+            
+            <Grid x:Name="gridHorizontal" Width="200" Height="200" Background="Aqua">
+                
+            </Grid>
 
+            <Grid x:Name="gridVertical" Width="200" Height="200" Background="Black">
+                
+                
+            </Grid>
 
         </Grid>
 
+        <VisualStateManager.VisualStateGroups>
+            <VisualStateGroup>
+
+                <VisualState x:Name="Small" AutomationProperties.AutomationId="max-width:936">
+                    <Storyboard>
+                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="rect" Storyboard.TargetProperty="Fill">
+                            <DiscreteObjectKeyFrame KeyTime="0" Value="Yellow"/>
+                        </ObjectAnimationUsingKeyFrames>
+
+                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="stack" Storyboard.TargetProperty="Orientation">
+                            <DiscreteObjectKeyFrame KeyTime="0" Value="Vertical"/>
+                        </ObjectAnimationUsingKeyFrames>
+
+                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="gridHorizontal" Storyboard.TargetProperty="Visibility">
+                            <DiscreteObjectKeyFrame KeyTime="0" Value="Collapsed"/>
+                        </ObjectAnimationUsingKeyFrames>
+
+                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="gridVertical" Storyboard.TargetProperty="Visibility">
+                            <DiscreteObjectKeyFrame KeyTime="0" Value="Visible"/>
+                        </ObjectAnimationUsingKeyFrames>
+                    </Storyboard>
+                </VisualState>
+
+                <VisualState x:Name="Normal" AutomationProperties.AutomationId="max-width:936">
+                    <Storyboard>
+                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="rect" Storyboard.TargetProperty="Fill">
+                            <DiscreteObjectKeyFrame KeyTime="0" Value="Blue"/>
+                        </ObjectAnimationUsingKeyFrames>
+
+                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="stack" Storyboard.TargetProperty="Orientation">
+                            <DiscreteObjectKeyFrame KeyTime="0" Value="Horizontal"/>
+                        </ObjectAnimationUsingKeyFrames>
+
+                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="gridHorizontal" Storyboard.TargetProperty="Visibility">
+                            <DiscreteObjectKeyFrame KeyTime="0" Value="Visible"/>
+                        </ObjectAnimationUsingKeyFrames>
+
+                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="gridVertical" Storyboard.TargetProperty="Visibility">
+                            <DiscreteObjectKeyFrame KeyTime="0" Value="Collapsed"/>
+                        </ObjectAnimationUsingKeyFrames>
+                    </Storyboard>
+                </VisualState>
+
+                <VisualState x:Name="Small2" AutomationProperties.AutomationId="min-width:937">
+                    <Storyboard>
+                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="stackMargin" Storyboard.TargetProperty="Margin">
+                            <DiscreteObjectKeyFrame KeyTime="0" Value="0,0,0,0"/>
+                        </ObjectAnimationUsingKeyFrames>
+                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="stackMargin" Storyboard.TargetProperty="HorizontalAlignment">
+                            <DiscreteObjectKeyFrame KeyTime="0" Value="Stretch"/>
+                        </ObjectAnimationUsingKeyFrames>
+                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="gridFundo" Storyboard.TargetProperty="Background">
+                            <DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource _Black}"/>
+                        </ObjectAnimationUsingKeyFrames>
+                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="gridWhite" Storyboard.TargetProperty="Visibility">
+                            <DiscreteObjectKeyFrame KeyTime="0" Value="Visible"/>
+                        </ObjectAnimationUsingKeyFrames>
+                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="scroll" Storyboard.TargetProperty="HorizontalScrollMode">
+                            <DiscreteObjectKeyFrame KeyTime="0" Value="Auto"/>
+                        </ObjectAnimationUsingKeyFrames>
+                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="scroll" Storyboard.TargetProperty="HorizontalScrollBarVisibility">
+                            <DiscreteObjectKeyFrame KeyTime="0" Value="Auto"/>
+                        </ObjectAnimationUsingKeyFrames>
+                    </Storyboard>
+                </VisualState>
+
+            </VisualStateGroup>
+        </VisualStateManager.VisualStateGroups>
     </Grid>
 </Page>

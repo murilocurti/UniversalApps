@@ -3,8 +3,10 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
+using Universal_Apps_01.ViewModels;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
+using Windows.System;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Controls.Primitives;
@@ -22,9 +24,28 @@ namespace Universal_Apps_01.Views
     /// </summary>
     public sealed partial class Misc : Page
     {
+        MiscViewModel vm = new MiscViewModel();
+
         public Misc()
         {
             this.InitializeComponent();
+
+            this.DataContext = vm;
+
+            this.SizeChanged += Misc_SizeChanged;
+          
+        }
+
+        void Misc_SizeChanged(object sender, SizeChangedEventArgs e)
+        {
+            if(e.NewSize.Width > 700)
+            {
+                VisualStateManager.GoToState(this, "Normal", true);
+            }
+            else
+            {
+                VisualStateManager.GoToState(this, "Small", true);
+            }
         }
     }
 }

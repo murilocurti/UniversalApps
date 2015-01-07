@@ -29,6 +29,30 @@ namespace Universal_Apps_01.Views
         {
             this.InitializeComponent();
             this.DataContext = vm;
+
+            this.Loaded += Indicadores_Progresso_Loaded;
         }
+
+        protected override void OnNavigatedTo(NavigationEventArgs e)
+        {
+            base.OnNavigatedTo(e);
+
+            if (e.NavigationMode == NavigationMode.New)
+            {
+                this.vm.LoadCommand.Execute(null);
+            }
+        }
+
+        void Indicadores_Progresso_Loaded(object sender, RoutedEventArgs e)
+        {
+           //throw new NotImplementedException();
+        }
+
+
+        protected override void OnNavigatedFrom(NavigationEventArgs e)
+        {
+            base.OnNavigatedFrom(e);
+        }
+        
     }
 }

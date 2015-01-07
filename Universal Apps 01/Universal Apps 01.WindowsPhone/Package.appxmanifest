@@ -42,5 +42,6 @@
   <Capabilities>
     <Capability Name="internetClientServer" />
     <Capability Name="documentsLibrary" />
+    <DeviceCapability Name="location" />
   </Capabilities>
 </Package>

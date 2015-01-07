@@ -19,7 +19,7 @@
 
         <Grid Name="content"  Style="{StaticResource ContentGridStyle}">
 
-
+            <WebView Name="web"  Source="http://www.bing.com"/>
 
 
         </Grid>

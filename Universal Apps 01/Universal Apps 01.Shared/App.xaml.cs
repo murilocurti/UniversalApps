@@ -19,10 +19,12 @@ using Windows.UI.Xaml.Navigation;
 
 #if WINDOWS_PHONE_APP
 using Windows.Phone.UI.Input;
+using Universal_Apps_01.Common;
 #endif
 
 #if WINDOWS_APP
 using Windows.UI.Xaml.Navigation;
+using Universal_Apps_01.Common;
 #else
 
 #endif
@@ -50,14 +52,22 @@ namespace Universal_Apps_01
             this.InitializeComponent();
             this.Suspending += this.OnSuspending;
 
+            this.UnhandledException += App_UnhandledException;
 
-
+            this.RequestedTheme = ApplicationTheme.Dark;
 
 #if WINDOWS_PHONE_APP
             HardwareButtons.BackPressed += HardwareButtons_BackPressed;
 #endif
 
 
+        }
+
+        void App_UnhandledException(object sender, 
+            UnhandledExceptionEventArgs e)
+        {
+            
+            e.Handled = true;
         }
 
 #if WINDOWS_PHONE_APP
@@ -111,7 +121,7 @@ namespace Universal_Apps_01
         /// search results, and so forth.
         /// </summary>
         /// <param name="e">Details about the launch request and process.</param>
-        protected override void OnLaunched(LaunchActivatedEventArgs e)
+        protected async override void OnLaunched(LaunchActivatedEventArgs e)
         {
 #if DEBUG
             if (System.Diagnostics.Debugger.IsAttached)
@@ -129,12 +139,18 @@ namespace Universal_Apps_01
                 // Create a Frame to act as the navigation context and navigate to the first page
                 rootFrame = new Frame();
 
+                SuspensionManager.RegisterFrame(rootFrame, "appFrame");
+
                 // TODO: change this value to a cache size that is appropriate for your application
                 rootFrame.CacheSize = 1;
 
                 if (e.PreviousExecutionState == ApplicationExecutionState.Terminated)
                 {
-                    // TODO: Load state from previously suspended application
+                    try
+                    {
+                        await SuspensionManager.RestoreAsync();
+                    }
+                    catch { }
                 }
 
                 // Place the frame in the current Window
@@ -192,9 +208,11 @@ namespace Universal_Apps_01
         /// </summary>
         /// <param name="sender">The source of the suspend request.</param>
         /// <param name="e">Details about the suspend request.</param>
-        private void OnSuspending(object sender, SuspendingEventArgs e)
+        private async void OnSuspending(object sender, SuspendingEventArgs e)
         {
             var deferral = e.SuspendingOperation.GetDeferral();
+
+            await SuspensionManager.SaveAsync();
 
             // TODO: Save application state and stop any background activity
             deferral.Complete();

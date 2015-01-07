@@ -6,6 +6,7 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:controls="using:Universal_Apps_01.UserControls"
+    RequestedTheme="Dark"
     mc:Ignorable="d">
 
     <Grid Name="root"  Style="{StaticResource RootGridStyle}">       
@@ -20,7 +21,7 @@
         <Grid Name="content"  Style="{StaticResource ContentGridStyle}">
 
             
-            <Button HorizontalAlignment="Center"
+            <Button HorizontalAlignment="Center" RequestedTheme="Default"
                     VerticalAlignment="Center"  Content="IBGE">
                 
             </Button>

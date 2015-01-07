@@ -12,8 +12,19 @@ namespace Universal_Apps_01.ViewModels
         public Indicadores_ProgressoViewModel()
         {
             this.SalvarCommand = new RelayCommand(Salvar);
+            this.LoadCommand = new RelayCommand(Load);
 
         }
+
+         public ICommand LoadCommand { get; set; }
+
+         private async void Load()
+         {
+             this.IsEmProgresso = true;
+             this.MensagemDeProgresso = "Inicilizando...";
+             await Task.Delay(TimeSpan.FromSeconds(3));
+             this.IsEmProgresso = false;
+         }
 
         public ICommand SalvarCommand { get; set; }
 

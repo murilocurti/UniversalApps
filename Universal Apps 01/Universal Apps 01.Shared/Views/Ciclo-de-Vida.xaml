@@ -19,7 +19,7 @@
 
         <Grid Name="content"  Style="{StaticResource ContentGridStyle}">
 
-
+            <TextBox Name="txt"></TextBox>
            
 
         </Grid>

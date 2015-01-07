@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
+using System.Threading.Tasks;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
 using Windows.UI.Xaml;
@@ -25,6 +26,22 @@ namespace Universal_Apps_01.Views
         public WebView_Javascript()
         {
             this.InitializeComponent();
+
+            this.Loaded += WebView_Javascript_Loaded;
+        }
+
+        async void WebView_Javascript_Loaded(object sender, RoutedEventArgs e)
+        {
+            //this.web.Navigate(new Uri("http://www.google.com.br"));
+
+            this.web.NavigateToString("<html><head><script>function sum(a,b){return a + b;}</script><body style='background-color:darkgray'><h1>IBGE</h1></body></html>");
+            
+            await Task.Delay(TimeSpan.FromSeconds(5));
+
+             var result = await this.web.InvokeScriptAsync("sum", new string[]{"10", "10"});
+
+             int a = 0;
+            
         }
     }
 }
