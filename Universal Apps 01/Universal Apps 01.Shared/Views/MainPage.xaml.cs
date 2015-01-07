@@ -43,6 +43,13 @@ namespace Universal_Apps_01.Views
             pages.Add("11 - Settings", typeof(Settings));
             pages.Add("12 - Serviços", typeof(Servicos));
 
+            pages.Add("13 - Indicadores de Progresso", typeof(Indicadores_Progresso));
+            pages.Add("14 - Conectividade", typeof(Conectividade));
+            pages.Add("15 - Ciclo de Vida da aplicação", typeof(Ciclo_de_Vida));
+            pages.Add("16 - Geolocation e Mapas", typeof(Geolocation_Mapas));
+            pages.Add("17 - WebView e Javascript", typeof(WebView_Javascript));
+            pages.Add("18 - Misc", typeof(Misc));
+            pages.Add("19 - Blend", typeof(Blend));
             
             this.DataContext = pages;
         }

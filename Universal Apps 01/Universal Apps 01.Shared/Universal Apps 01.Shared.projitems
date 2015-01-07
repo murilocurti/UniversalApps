@@ -28,6 +28,15 @@
     <Compile Include="$(MSBuildThisFileDirectory)Views\Arquivos.xaml.cs">
       <DependentUpon>Arquivos.xaml</DependentUpon>
     </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Views\Blend.xaml.cs">
+      <DependentUpon>Blend.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Views\Ciclo-de-Vida.xaml.cs">
+      <DependentUpon>Ciclo-de-Vida.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Views\Conectividade.xaml.cs">
+      <DependentUpon>Conectividade.xaml</DependentUpon>
+    </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)Views\Controles-Container.xaml.cs">
       <DependentUpon>Controles-Container.xaml</DependentUpon>
     </Compile>
@@ -36,6 +45,12 @@
     </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)Views\DataBinding.xaml.cs">
       <DependentUpon>DataBinding.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Views\Geolocation-Mapas.xaml.cs">
+      <DependentUpon>Geolocation-Mapas.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Views\Indicadores-Progresso.xaml.cs">
+      <DependentUpon>Indicadores-Progresso.xaml</DependentUpon>
     </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)Views\MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
@@ -49,6 +64,9 @@
     <Compile Include="$(MSBuildThisFileDirectory)Views\Mesmo-Xaml.xaml.cs">
       <DependentUpon>Mesmo-Xaml.xaml</DependentUpon>
     </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Views\Misc.xaml.cs">
+      <DependentUpon>Misc.xaml</DependentUpon>
+    </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)Views\PageBase.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Views\Resources.xaml.cs">
       <DependentUpon>Resources.xaml</DependentUpon>
@@ -61,6 +79,9 @@
     </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)Views\UserControls.xaml.cs">
       <DependentUpon>UserControls.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Views\WebView-Javascript.xaml.cs">
+      <DependentUpon>WebView-Javascript.xaml</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -76,6 +97,18 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="$(MSBuildThisFileDirectory)Views\Blend.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="$(MSBuildThisFileDirectory)Views\Ciclo-de-Vida.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="$(MSBuildThisFileDirectory)Views\Conectividade.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="$(MSBuildThisFileDirectory)Views\Controles-Container.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -85,6 +118,14 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="$(MSBuildThisFileDirectory)Views\DataBinding.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="$(MSBuildThisFileDirectory)Views\Geolocation-Mapas.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="$(MSBuildThisFileDirectory)Views\Indicadores-Progresso.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -104,6 +145,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="$(MSBuildThisFileDirectory)Views\Misc.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="$(MSBuildThisFileDirectory)Views\Resources.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -120,8 +165,12 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="$(MSBuildThisFileDirectory)Views\WebView-Javascript.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
-    <None Include="$(MSBuildThisFileDirectory)Packages\Newtonsoft.Json.dll" />
+    <None Include="$(MSBuildThisFileDirectory)Packages\Newtonsoft.Json2.dll" />
   </ItemGroup>
 </Project>

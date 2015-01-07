@@ -70,7 +70,7 @@ namespace Universal_Apps_01
                 frame.GoBack();
             }
 
-            //e.Handled = true;
+            e.Handled = true;
         }
 
         

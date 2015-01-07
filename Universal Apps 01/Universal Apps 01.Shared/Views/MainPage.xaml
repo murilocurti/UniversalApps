@@ -19,10 +19,10 @@
 
         <Grid Style="{StaticResource ContentGridStyle}">
             
-            <ListView Grid.Row="1" Margin="0,0,0,50" ItemsSource="{Binding Keys}" HorizontalAlignment="Left" IsItemClickEnabled="True" ItemClick="ListView_ItemClick">
+            <ListView Grid.Row="1" Margin="0,0,0,50" HorizontalAlignment="Stretch" ItemsSource="{Binding Keys}" IsItemClickEnabled="True" ItemClick="ListView_ItemClick">
                 <ListView.ItemTemplate>
                     <DataTemplate>
-                        <TextBlock Text="{Binding}" FontSize="28" Margin="5"/>
+                        <TextBlock Text="{Binding}" FontSize="28" Margin="5" TextTrimming="CharacterEllipsis"/>
                     </DataTemplate>
                 </ListView.ItemTemplate>
             </ListView>

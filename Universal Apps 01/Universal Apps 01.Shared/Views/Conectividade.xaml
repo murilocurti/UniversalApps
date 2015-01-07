@@ -1,0 +1,28 @@
+﻿<Page
+    x:Class="Universal_Apps_01.Views.Conectividade"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Universal_Apps_01.Views"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:controls="using:Universal_Apps_01.UserControls"
+    mc:Ignorable="d">
+
+    <Grid Name="root"  Style="{StaticResource RootGridStyle}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="140"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!-- Back button and page title -->
+        <controls:Header DataContext="Conectividade"/>
+
+        <Grid Name="content"  Style="{StaticResource ContentGridStyle}">
+
+
+
+
+        </Grid>
+
+    </Grid>
+</Page>
