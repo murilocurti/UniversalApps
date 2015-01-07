@@ -182,6 +182,7 @@
     <None Include="$(MSBuildThisFileDirectory)Packages\Json.Net\Net40\Newtonsoft.Json.pdb" />
     <None Include="$(MSBuildThisFileDirectory)Packages\Json.Net\Net45\Newtonsoft.Json.dll" />
     <None Include="$(MSBuildThisFileDirectory)Packages\Json.Net\Net45\Newtonsoft.Json.pdb" />
+    <None Include="$(MSBuildThisFileDirectory)Packages\Json.Net\portable-net45+wp80+win8+wpa81+aspnetcore50\Newtonsoft.Json.dll" />
     <None Include="$(MSBuildThisFileDirectory)Packages\Json.Net\Portable40\Newtonsoft.Json.dll" />
     <None Include="$(MSBuildThisFileDirectory)Packages\Json.Net\Portable40\Newtonsoft.Json.pdb" />
     <None Include="$(MSBuildThisFileDirectory)Packages\Json.Net\Portable\Newtonsoft.Json.dll" />
@@ -195,6 +196,7 @@
     <Content Include="$(MSBuildThisFileDirectory)Packages\Json.Net\Net35\Newtonsoft.Json.xml" />
     <Content Include="$(MSBuildThisFileDirectory)Packages\Json.Net\Net40\Newtonsoft.Json.xml" />
     <Content Include="$(MSBuildThisFileDirectory)Packages\Json.Net\Net45\Newtonsoft.Json.xml" />
+    <Content Include="$(MSBuildThisFileDirectory)Packages\Json.Net\portable-net45+wp80+win8+wpa81+aspnetcore50\Newtonsoft.Json.xml" />
     <Content Include="$(MSBuildThisFileDirectory)Packages\Json.Net\Portable40\Newtonsoft.Json.xml" />
     <Content Include="$(MSBuildThisFileDirectory)Packages\Json.Net\Portable\Newtonsoft.Json.xml" />
     <Content Include="$(MSBuildThisFileDirectory)Packages\Json.Net\WinRT\Newtonsoft.Json.xml" />
