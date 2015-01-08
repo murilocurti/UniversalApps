@@ -26,8 +26,6 @@ namespace Universal_Apps_01.Views
         public Geolocation_Mapas()
         {
             this.InitializeComponent();
-
-            this.Loaded += Geolocation_Mapas_Loaded;
         }
 
         async void Geolocation_Mapas_Loaded(object sender, RoutedEventArgs e)
@@ -39,6 +37,7 @@ namespace Universal_Apps_01.Views
             geo.PositionChanged += geo_PositionChanged;
             var position = await geo.GetGeopositionAsync();
 
+            this.text.Text = string.Format("Coordenada atual {0}, {1}", position.Coordinate.Latitude, position.Coordinate.Longitude);
             //this.map.Center =
             //    new Geopoint(new BasicGeoposition()
             //    {

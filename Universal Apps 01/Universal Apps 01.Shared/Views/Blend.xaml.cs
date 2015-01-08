@@ -5,6 +5,7 @@ using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
+using Windows.UI.Popups;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Controls.Primitives;
@@ -25,6 +26,19 @@ namespace Universal_Apps_01.Views
         public Blend()
         {
             this.InitializeComponent();
+
+            //Atrasa o início da animação em 2 segundos
+            this.Storyboard1.BeginTime = TimeSpan.FromSeconds(2);
+
+            this.Storyboard1.Completed += Storyboard1_Completed;
+
+            this.Storyboard1.Begin();
+        }
+
+        async void Storyboard1_Completed(object sender, object e)
+        {
+            //Só será ativado se a animação não estiver com RepeatBehavior = Forever
+            await new MessageDialog("Animação finalizada!").ShowAsync();
         }
     }
 }

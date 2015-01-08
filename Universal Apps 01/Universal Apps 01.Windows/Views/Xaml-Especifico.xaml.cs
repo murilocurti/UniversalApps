@@ -25,6 +25,7 @@ namespace Universal_Apps_01.Views
         public Xaml_Especifico()
         {
             this.InitializeComponent();
+
         }
     }
 }

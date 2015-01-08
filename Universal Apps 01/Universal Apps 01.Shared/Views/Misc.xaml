@@ -92,29 +92,6 @@
                     </Storyboard>
                 </VisualState>
 
-                <VisualState x:Name="Small2" AutomationProperties.AutomationId="min-width:937">
-                    <Storyboard>
-                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="stackMargin" Storyboard.TargetProperty="Margin">
-                            <DiscreteObjectKeyFrame KeyTime="0" Value="0,0,0,0"/>
-                        </ObjectAnimationUsingKeyFrames>
-                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="stackMargin" Storyboard.TargetProperty="HorizontalAlignment">
-                            <DiscreteObjectKeyFrame KeyTime="0" Value="Stretch"/>
-                        </ObjectAnimationUsingKeyFrames>
-                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="gridFundo" Storyboard.TargetProperty="Background">
-                            <DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource _Black}"/>
-                        </ObjectAnimationUsingKeyFrames>
-                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="gridWhite" Storyboard.TargetProperty="Visibility">
-                            <DiscreteObjectKeyFrame KeyTime="0" Value="Visible"/>
-                        </ObjectAnimationUsingKeyFrames>
-                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="scroll" Storyboard.TargetProperty="HorizontalScrollMode">
-                            <DiscreteObjectKeyFrame KeyTime="0" Value="Auto"/>
-                        </ObjectAnimationUsingKeyFrames>
-                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="scroll" Storyboard.TargetProperty="HorizontalScrollBarVisibility">
-                            <DiscreteObjectKeyFrame KeyTime="0" Value="Auto"/>
-                        </ObjectAnimationUsingKeyFrames>
-                    </Storyboard>
-                </VisualState>
-
             </VisualStateGroup>
         </VisualStateManager.VisualStateGroups>
     </Grid>

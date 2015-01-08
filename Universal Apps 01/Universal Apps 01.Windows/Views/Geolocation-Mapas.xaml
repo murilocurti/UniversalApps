@@ -19,7 +19,7 @@
 
         <Grid Name="content"  Style="{StaticResource ContentGridStyle}">
 
-            <!--<Maps:MapControl Name="map"  />-->
+            <TextBlock Name="text" FontSize="36" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
 
 
         </Grid>

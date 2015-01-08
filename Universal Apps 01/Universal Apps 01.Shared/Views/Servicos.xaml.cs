@@ -8,6 +8,7 @@ using System.Runtime.InteropServices.WindowsRuntime;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
 using Windows.Storage;
+using Windows.UI.Popups;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Controls.Primitives;
@@ -62,9 +63,7 @@ namespace Universal_Apps_01.Views
 
             string text = await FileIO.ReadTextAsync(file);
 
-            int a = 0;
-
-
+            new MessageDialog(text).ShowAsync();
         }
     }
 }
