@@ -18,7 +18,7 @@ namespace Universal_Apps_01.Views
             #endif
         }
 
-#if WINDOWS_PHONE_APP
+#if WINDOWS_PHONE_APP 
         private void HardwareButtons_BackPressed(object sender, BackPressedEventArgs e)
         {
             if (this.Frame.CanGoBack)
